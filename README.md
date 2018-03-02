@@ -1,5 +1,6 @@
 # arduino-power-meter
 
+```
 Power Meter Contacts
    S0-     S0-
     |       |    10kOm
@@ -10,3 +11,4 @@ Power Meter Contacts
 Buzzer
 minus - to ground
 sygnal to ~3 pin (Arduino)
+```
