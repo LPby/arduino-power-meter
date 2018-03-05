@@ -20,7 +20,7 @@ void loop()  {
   {
     new_time = millis();
     digitalWrite(led, HIGH);
-    power=3600000/(new_time - old_time);
+    power=3600000000/1600*(new_time - old_time);
     Serial.println(power);
     if ( power > power_limit ) tone(buzzer, 600, 100);
     delay(200); //wait for end of pulse (pulse time is 50 ms)
