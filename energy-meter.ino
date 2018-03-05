@@ -20,7 +20,8 @@ void loop()  {
   {
     new_time = millis();
     digitalWrite(led, HIGH);
-    power=3600*1000*1000/1600*(new_time - old_time); 
+    power=3600*1000*1000/1600*(new_time - old_time); //W = (n * 3600)/(Imp * t), кВт
+    //    1h   ms   kW   pps   time(ms)
     Serial.println(power);
     if ( power > power_limit ) tone(buzzer, 600, 100);
     delay(200); //wait for end of pulse (pulse time is 50 ms)
