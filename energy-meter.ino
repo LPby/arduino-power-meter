@@ -6,6 +6,7 @@ int power;
 int power_limit = 8000; // 8kW alert
 unsigned long old_time;
 unsigned long new_time;
+char usb_in = 0;
 
 void setup()  { 
   pinMode(led, OUTPUT); 
@@ -25,5 +26,8 @@ void loop()  {
     delay(200); //wait for end of pulse (pulse time is 50 ms)
     digitalWrite(led, LOW);
     old_time = new_time;
+  }
+  if (Serial.available() > 0) {
+    Serial.readBytes(usb_in,1);
   }
 }
