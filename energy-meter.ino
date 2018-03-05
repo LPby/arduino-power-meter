@@ -2,7 +2,7 @@ int port = A0;
 int led = 13;
 int val = 0;
 int buzzer = 3;
-int power;
+fload power;
 int power_limit = 8000; // 8kW alert
 unsigned long old_time;
 unsigned long new_time;
