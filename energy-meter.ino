@@ -39,7 +39,7 @@ void loop()  {
     //    1h   ms   kW    pps   time(ms)
     Serial.println(power);
     if ( power > power_limit ) tone(buzzer, 1400, 100);
-    delay(150); //wait for end of pulse (pulse time >=30 ms)
+    delay(50); //wait for end of pulse (pulse time >=30 ms)
     digitalWrite(led, LOW);
     old_time = new_time;
   }
